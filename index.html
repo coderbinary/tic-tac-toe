@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Tic Tac Toe Game</title>
+</head>
+<body>
+  <div class="game-start">
+    <button class="start-button">Start Game</button>
+  </div>
+  <header class="game-header hidden">
+    <h1 class="game-title">Tic Tac Toe</h1>
+  </header>
+  <main class="container hidden">
+
+    <p class="player-one">Player 1 : ???</p>
+    <p class="turn"><span class="current-player">???</span>'s Turn</p>
+    <div class="cells-container">
+      <button class="cell" data-id="0"></button>
+      <button class="cell" data-id="1"></button>
+      <button class="cell" data-id="2"></button>
+      <button class="cell" data-id="3"></button>
+      <button class="cell" data-id="4"></button>
+      <button class="cell" data-id="5"></button>
+      <button class="cell" data-id="6"></button>
+      <button class="cell" data-id="7"></button>
+      <button class="cell" data-id="8"></button>
+    </div>
+    <p class="player-two">Player 2 : ???</p>
+  </main>
+  <footer class="game-footer hidden">
+    <p><a href="https://github.com/coderbinary" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+  </footer>
+  <dialog class="players-name--entry dialog-theme">
+    <div class="form-container">
+      <form id="players-name--form"  class="players-name--form" action="">
+        <label for="player-one--name" id="">Enter Player 1's name: </label>
+        <input type="text" id="player-one--name" name="player-one">
+        <label for="player-two--name">Enter Player 2's name: </label>
+        <input type="text" id="player-two--name" name="player-two">
+        <p>Player 1, select from any of the two below ( 'X' will start first ) :</p>
+        <div class="x-o">
+          <div class="choice-x">X</div>
+          <div class="choice-o">O</div>
+        </div>
+        <p>Start ? <small class="hidden"> *Fill all the fields and choose the options before submitting</small></p>
+        <div class="game-choices">
+          <button type="submit" class="submit">Start Game</button>
+          <button type="reset" class="reset">Reset Form</button>
+          <button type="button" class="cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+  <dialog class="win-draw--dialog dialog-theme">
+    <div class="dialog-content">
+      <p class="message"></p>
+      <div class="buttons">
+        <button class="play-again">Play Another Round</button>
+        <button class="quit">Quit</button>
+      </div>
+    </div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
