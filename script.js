@@ -97,6 +97,14 @@ function showWinner(comb){
 }
 quitButton.addEventListener("click",()=>{
   winDrawDialog.classList.remove("dialog-animate");
+  game.gameBoard.resetBoard();
+  const cells = cellsContainer.querySelectorAll(".cell");
+  for (let cell of cells){
+    cell.textContent = "";
+    if(cell.classList.contains("winning-cells")){
+      cell.classList.remove("winning-cells");
+    }
+  }
   setTimeout(() => {
     winDrawDialog.close();
     header.classList.remove("game-header--animate");
@@ -156,6 +164,7 @@ dialogForm.addEventListener("click",(event)=>{
       return;
     }else{
       errorSmall.classList.add("hidden");
+      cPlayer = "X";
       currentPlayer.textContent = cPlayer;
       playerOneDisplay.textContent = `${playerOne.playerName} : ${playerOne.playerChoice}`;
       playerTwoDisplay.textContent = `${playerTwo.playerName} : ${playerTwo.playerChoice}`;
